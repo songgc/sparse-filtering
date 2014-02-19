@@ -5,10 +5,10 @@
 import numpy as np
 from scipy.optimize import fmin_l_bfgs_b
 
-from sklearn.base import BaseEstimator
+from sklearn.base import BaseEstimator, TransformerMixin
 
 
-class SparseFiltering(BaseEstimator):
+class SparseFiltering(BaseEstimator, TransformerMixin):
     """Sparse filtering
 
     Unsupervised learning of features using the sparse filtering algorithm.
