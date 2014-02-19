@@ -74,6 +74,9 @@ class SparseFiltering(BaseEstimator, TransformerMixin):
         """
         self.w_ = self._fit(X, **params)
         return self
+        
+    def transform(self, X, y=None):
+        return self._transform(X)
 
     def fit_transform(self, X, y=None, **params):
         """Fit the model with X and apply the dimensionality reduction on X.
